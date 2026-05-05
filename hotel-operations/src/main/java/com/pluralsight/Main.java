@@ -17,6 +17,7 @@ public class Main {
 
         // Testing the employee object
         Employee employee1 = new Employee(101, "Mubarak", "IT", 20.0, 45);
+        System.out.println("Employee: " + employee1.getName());
         System.out.println("Regular hours: " + employee1.getRegularHours());
         System.out.println("Overtime hours: " + employee1.getOvertimeHours());
         System.out.println("Total pay: $" + employee1.getTotalPay());
