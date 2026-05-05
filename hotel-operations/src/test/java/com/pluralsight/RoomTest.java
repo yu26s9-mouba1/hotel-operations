@@ -16,7 +16,7 @@ public class RoomTest {
 
         assertTrue(room.isOccupied());
         assertTrue(room.isDirty());
-        assertTrue(room.isAvailable());
+        assertFalse(room.isAvailable());
     }
 
 
@@ -36,7 +36,22 @@ public class RoomTest {
     }
 
 
-    
+    /**
+     * Test a clean room method
+     */
+
+    @Test
+    public void cleanRoom_shouldMakeRoomCleanAndAvailable() {
+
+        Room room = new Room(2, 150.00, false, true);
+
+        room.cleanRoom();
+
+        assertFalse(room.isDirty());
+        assertTrue(room.isAvailable());
+    }
+
+
 
 
 
