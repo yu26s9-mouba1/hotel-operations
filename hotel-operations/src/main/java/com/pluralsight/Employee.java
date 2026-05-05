@@ -6,6 +6,7 @@ public class Employee {
     private String department;
     private double payRate;
     private double hoursWorked;
+    private int clockInTime;
 
 
     public Employee(int employeeID, String name, String department, double payRate, double hoursWorked) {
@@ -90,5 +91,13 @@ public class Employee {
 
     public double getTotalPay(){
         return (getRegularHours() * payRate ) + (getOvertimeHours() * payRate * 1.5);
+    }
+
+    public void punchIn(int time) {
+        clockInTime = time;
+    }
+
+    public void punchOut(int time) {
+        hoursWorked += (time - clockInTime);
     }
 }
