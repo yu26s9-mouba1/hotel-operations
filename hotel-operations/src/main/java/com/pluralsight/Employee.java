@@ -1,5 +1,7 @@
 package com.pluralsight;
 
+import java.time.LocalDateTime;
+
 public class Employee {
     private int employeeID;
     private String name;
@@ -97,7 +99,24 @@ public class Employee {
         clockInTime = time;
     }
 
+    public void punchIn() {
+        LocalDateTime now = LocalDateTime.now();
+        clockInTime = now.getHour();
+    }
+
+
+    //Adding the Overloaded methods
     public void punchOut(int time) {
         hoursWorked += (time - clockInTime);
     }
+
+    public void punchOut(){
+        LocalDateTime now = LocalDateTime.now();
+        int currentTime = now.getHour();
+
+        hoursWorked += (currentTime - clockInTime);
+
+
+    }
+
 }
