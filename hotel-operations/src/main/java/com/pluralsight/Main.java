@@ -4,6 +4,8 @@ import java.time.LocalDateTime;
 public class Main {
     public static void main(String[] args) {
 
+        System.out.println("======== Reservations ============");
+
 
         /*Testing the rooms
          */
@@ -37,6 +39,24 @@ public class Main {
         System.out.println("Overtime hours: " + employee1.getOvertimeHours());
         System.out.println("Hours worked: " + employee1.getHoursWorked());
         System.out.println("Total pay: $" + employee1.getTotalPay());
+        System.out.println();
+
+
+        System.out.println("======== Hotel ==========");
+
+        Hotel hotel = new Hotel("Mubarak Hotel", 5, 10);
+
+        System.out.println("Available suites: " + hotel.getAvailableSuites());
+        System.out.println("Available basic rooms: " + hotel.getAvailableRooms());
+
+        boolean bookedSuite = hotel.bookRoom(2, true);
+        System.out.println("Suite booking successful: " + bookedSuite);
+        System.out.println("Available suites after booking: " + hotel.getAvailableSuites());
+
+        boolean bookedRoom = hotel.bookRoom(3, false);
+        System.out.println("Basic room booking successful: " + bookedRoom);
+        System.out.println("Available basic rooms after booking: " + hotel.getAvailableRooms());
+
 
 
 
