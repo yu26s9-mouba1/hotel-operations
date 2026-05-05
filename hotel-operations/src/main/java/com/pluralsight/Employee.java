@@ -58,7 +58,7 @@ public class Employee {
         this.hoursWorked = hoursWorked;
     }
 
-   
+
 
 
 
@@ -78,7 +78,7 @@ public class Employee {
         }
     }
 
-    public double getOverTimeHours(){
+    public double getOvertimeHours(){
         if (hoursWorked > 40) {
             return hoursWorked - 40;
 
@@ -89,6 +89,6 @@ public class Employee {
 
 
     public double getTotalPay(){
-        return (getRegularHours() * payRate ) + (getOverTimeHours() * payRate * 1.5);
+        return (getRegularHours() * payRate ) + (getOvertimeHours() * payRate * 1.5);
     }
 }

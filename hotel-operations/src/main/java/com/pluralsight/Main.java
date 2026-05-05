@@ -5,35 +5,21 @@ public class Main {
 
 
 
+        Room room1 = new Room(2, 150.00, false, false);
+        System.out.println("Room available: " + room1.isAvailable());
+
+        Reservation reservation1 = new Reservation("king", 3, true);
+        System.out.println("Reservation total: $" + reservation1.getReservationTotal());
+
+        Employee employee1 = new Employee(101, "Mubarak", "IT", 20.0, 45);
+        System.out.println("Regular hours: " + employee1.getRegularHours());
+        System.out.println("Overtime hours: " + employee1.getOvertimeHours());
+        System.out.println("Total pay: $" + employee1.getTotalPay());
+
+
+
     }
 
-
-
-   public double getPrice(){
-        return 0;
-
-   }
-
-   public int getNumberOfBeds(){
-        return 0;
-   }
-
-   public boolean isOccupied(){
-        return true;
-   }
-
-   public boolean isDirty(){
-        return true;
-   }
-
-   public int getReservationTotal(){
-        return 0;
-   }
-
-
-   public double getOvertimeHours(){
-        return 0;
-   }
 
 
 
